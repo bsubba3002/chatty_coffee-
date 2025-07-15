@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Balasubrahmanya | Portfolio</title>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f2027;
+      color: white;
+    }
+
+    nav {
+      padding: 15px 30px;
+      display: flex;
+      justify-content: flex-end;
+      background-color: rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00d4ff;
+    }
+
+    header.hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      padding: 60px 20px;
+      min-height: 100vh;
+      gap: 30px;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      flex: 1;
+      min-width: 300px;
+      max-width: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #00d4ff;
+    }
+
+    .card p {
+      font-size: 1em;
+      line-height: 1.6;
+      color: #d3e5ff;
+    }
+
+    .profile-img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      margin-top: 20px;
+    }
+
+    .project-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .project-list li {
+      padding: 8px 0;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .project-list li:last-child {
+      border-bottom: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      header.hero {
+        flex-direction: column;
+      }
+      .card {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="education.html">Education</a>
+    <a href="internships.html">Internships</a>
+    <a href="projects.html">Projects</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+
+    <!-- Left: Professional Summary + Image -->
+    <div class="card" data-aos="fade-right">
+      <h2>Professional Summary</h2>
+      <p>
+        Aspiring Machine Learning Engineer with a strong foundation in intelligent systems and data-driven technologies, currently pursuing a BE in Artificial Intelligence and Machine Learning. Proficient in Python, SQL, and core ML frameworks, with hands-on experience in data preprocessing, model development, and deployment. Skilled in supervised and unsupervised learning, deep learning, and NLP. A collaborative, adaptable team player with a passion for solving real-world problems through intelligent systems.
+      </p>
+      <img src="images/profile.jpg" alt="Profile Photo" class="profile-img">
+    </div>
+
+    <!-- Right: Featured Projects -->
+    <div class="card" data-aos="fade-left" data-aos-delay="200">
+      <h2>Featured Projects</h2>
+      <ul class="project-list">
+        <li>🔍 SKILL-SYNC – Job Recommender</li>
+        <li>🎤 SamvaadX – Voice Interview Assistant</li>
+        <li>📜 Om.ai – Cultural Chatbot</li>
+        <li>📝 Resume Evaluator Agent</li>
+      </ul>
+    </div>
+
+  </header>
+
+  <!-- Init AOS -->
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
