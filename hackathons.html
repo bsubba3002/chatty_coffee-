@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Balasubrahmanya | Hackathons</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #0f2027;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+
+    .neon-cyan {
+      color: #00d4ff;
+    }
+
+    .btn-neon {
+      background-color: #00d4ff;
+      color: #0f2027;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 0 8px #00d4ff;
+    }
+
+    .btn-neon:hover {
+      background-color: #00b0ff;
+      box-shadow: 0 0 12px 4px #00b0ff;
+    }
+
+    .card-bg {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 1.5rem;
+      box-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+      transition: all 0.3s ease;
+      padding: 1.5rem;
+    }
+
+    .card-bg:hover {
+      box-shadow: 0 0 12px 4px #00d4ff;
+      transform: translateY(-6px);
+    }
+
+    .neon-link {
+      color: #00d4ff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .neon-link:hover {
+      text-shadow: 0 0 8px #00d4ff;
+      text-decoration: underline;
+    }
+
+    .text-gray-light {
+      color: #bbb;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ Sticky Navbar -->
+  <header class="bg-[#0f2027] shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="text-[#00d4ff] font-extrabold text-xl tracking-wide">
+          <a href="index.html" class="hover:text-white transition duration-300">Balasubrahmanya</a>
+        </div>
+
+        <!-- Hamburger -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-[#00d4ff]" aria-label="Toggle Menu">
+            <svg id="hamburger-icon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6 text-[#00d4ff] font-semibold tracking-wide">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <a href="education.html" class="hover:text-white">Education</a>
+          <a href="internships.html" class="hover:text-white">Internships</a>
+          <a href="skills.html" class="hover:text-white">Skills</a>
+          <a href="projects.html" class="hover:text-white">Projects</a>
+          <a href="certifications.html" class="hover:text-white">Certifications</a>
+          <a href="hackathons.html" class="hover:text-white underline font-bold">Hackathons</a>
+          <a href="personal.html" class="hover:text-white">Personal</a>
+        </nav>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-2 pb-4 text-[#00d4ff] font-semibold">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="education.html" class="hover:text-white">Education</a>
+        <a href="internships.html" class="hover:text-white">Internships</a>
+        <a href="skills.html" class="hover:text-white">Skills</a>
+        <a href="projects.html" class="hover:text-white">Projects</a>
+        <a href="certifications.html" class="hover:text-white">Certifications</a>
+        <a href="hackathons.html" class="hover:text-white underline font-bold">Hackathons</a>
+        <a href="personal.html" class="hover:text-white">Personal</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ JavaScript for Mobile Toggle -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- ✅ Main Content -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-extrabold neon-cyan">Hackathons & Achievements</h1>
+      <p class="text-gray-light text-lg mt-2">Creative innovations and competitive wins</p>
+    </header>
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="card-bg">
+        <h2 class="neon-link text-xl mb-1">WE UNBOUND (VCET, Puttur)</h2>
+        <p class="text-gray-light mb-1">🏆 1st Place - AI vs Humans</p>
+        <p class="text-gray-light">Explored synergy of humans & AI in task automation and ethics.</p>
+        <a href="https://drive.google.com/your-certificate-link" target="_blank" class="btn-neon mt-4">View Certificate</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card-bg">
+        <h2 class="neon-link text-xl mb-1">INNOVATION Hackathon (IEEE-DSATM)</h2>
+        <p class="text-gray-light mb-1">🥈 2nd Place - VR & AR Book</p>
+        <p class="text-gray-light">Immersive VR game and AR learning book prototype developed.</p>
+        <a href="https://drive.google.com/your-certificate-link" target="_blank" class="btn-neon mt-4">View Certificate</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card-bg">
+        <h2 class="neon-link text-xl mb-1">Aetherion Hackathon</h2>
+        <p class="text-gray-light mb-1">🥈 2nd Place - Smart Public Services</p>
+        <p class="text-gray-light">Built public service tech to improve access & efficiency.</p>
+        <a href="https://drive.google.com/your-certificate-link" target="_blank" class="btn-neon mt-4">View Certificate</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card-bg">
+        <h2 class="neon-link text-xl mb-1">SRISHTI 2024 Hackathon</h2>
+        <p class="text-gray-light mb-1">🎯 Traditional Food Recommender</p>
+        <p class="text-gray-light">Suggested regional dishes based on dietary preferences.</p>
+        <a href="https://drive.google.com/your-certificate-link" target="_blank" class="btn-neon mt-4">View Certificate</a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card-bg">
+        <h2 class="neon-link text-xl mb-1">SANKALP Hackathon</h2>
+        <p class="text-gray-light mb-1">🎮 Regional Language VR Game</p>
+        <p class="text-gray-light">Immersive gameplay in native language for inclusivity.</p>
+        <a href="https://drive.google.com/your-certificate-link" target="_blank" class="btn-neon mt-4">View Certificate</a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card-bg">
+        <h2 class="neon-link text-xl mb-1">IEEE R10 Hackathon</h2>
+        <p class="text-gray-light mb-1">🩺 Assistive Medical Device</p>
+        <p class="text-gray-light">Designed a prototype for differently-abled accessibility.</p>
+        <a href="https://drive.google.com/your-certificate-link" target="_blank" class="btn-neon mt-4">View Certificate</a>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card-bg">
+        <h2 class="neon-link text-xl mb-1">HAKOTSAVA Hackathon</h2>
+        <p class="text-gray-light mb-1">💡 KalaChakra – AI Career Advisor</p>
+        <p class="text-gray-light">Suggested job roles based on user skills using ML.</p>
+        <a href="https://drive.google.com/your-certificate-link" target="_blank" class="btn-neon mt-4">View Certificate</a>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card-bg">
+        <h2 class="neon-link text-xl mb-1">INDCON 25 – Tech Symposium</h2>
+        <p class="text-gray-light mb-1">💼 Anna University</p>
+        <p class="text-gray-light">Participated in national symposium on tech & management.</p>
+        <a href="https://drive.google.com/your-certificate-link" target="_blank" class="btn-neon mt-4">View Certificate</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer class="text-center mt-12 text-sm text-gray-400">
+    <p>Designed with ❤️ by Balasubrahmanya</p>
+  </footer>
+
+</body>
+</html>
