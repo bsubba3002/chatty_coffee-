@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education | Balasubrahmanya</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f2027;
+      color: #cde4ff;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #00d4ff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: rgba(0, 212, 255, 0.2);
+    }
+    nav a.active {
+      background-color: rgba(0, 212, 255, 0.3);
+      font-weight: 700;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto 60px auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #00d4ff;
+    }
+    ul li::before {
+      content: '✦';
+      color: #00d4ff;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    .specialization {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #a3c9ff;
+    }
+    .college-logo {
+      width: 50px;
+      height: auto;
+      margin-right: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 212, 255, 0.5);
+    }
+    section.edu-card {
+      background: rgba(255 255 255 / 0.05);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    section.edu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 212, 255, 0.8);
+    }
+    section.edu-card div.content {
+      flex: 1;
+    }
+    a.edu-link {
+      font-weight: 600;
+      color: #22d3ee; /* cyan-400 */
+      text-decoration: none;
+    }
+    a.edu-link:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #00d4ff;
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.5);
+      user-select: none;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 700, easing: 'ease-in-out' });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="internships.html">Internships</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="hackathons.html">Hackathons</a>
+    <a href="personal.html">Personal</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-extrabold">Education</h1>
+      <p class="text-blue-200 mt-2 text-lg">Academic Background</p>
+    </header>
+
+    <!-- Education Cards -->
+    <section class="edu-card" data-aos="fade-up">
+      <img
+        src="images/VCET.png"
+        alt="Vivekananda College Logo"
+        class="college-logo"
+      />
+      <div class="content">
+        <a
+          href="https://vcetputtur.ac.in/"
+          target="_blank"
+          class="edu-link"
+          >BE in AI & ML – Vivekananda College of Engineering and Technology,
+          Puttur (2026)</a
+        >
+        <div class="specialization">
+          <p class="font-semibold mt-2">Subjects</p>
+          <ul class="list-disc list-inside text-cyan-200">
+            <li>Machine Learning (ML)</li>
+            <li>Artificial Intelligence (AI)</li>
+            <li>Deep Learning</li>
+            <li>Natural Language Processing (NLP)</li>
+            <li>Human-Centered AI (HCAI)</li>
+            <li>Python Programming</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="edu-card" data-aos="fade-up" data-aos-delay="100">
+      <img
+        src="images/srpuc.jpeg"
+        alt="Shri Ram PU College Logo"
+        class="college-logo"
+      />
+      <div class="content">
+        <a
+          href="http://srvk.org/institutions/sri-rama-p-u-college/"
+          target="_blank"
+          class="edu-link"
+          >Pre-University – Shri Ram PU College, Kalladka (2022)</a
+        >
+        <div class="specialization">
+          <p class="font-semibold mt-2">Subjects</p>
+          <ul class="list-disc list-inside text-cyan-200">
+            <li>Mathematics</li>
+            <li>Physics</li>
+            <li>Computer Science</li>
+            <li>Chemistry</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="edu-card" data-aos="fade-up" data-aos-delay="200">
+      <img
+        src="images/sudana.jpeg"
+        alt="Sudana Residential School Logo"
+        class="college-logo"
+      />
+      <div class="content">
+        <a
+          href="https://www.sudanaschool.apsys-solutions.in/"
+          target="_blank"
+          class="edu-link"
+          >SSLC – Sudana Residential School, Puttur (2020)</a
+        >
+        <div class="specialization">
+          <p class="font-semibold mt-2">Subjects</p>
+          <ul class="list-disc list-inside text-cyan-200">
+            <li>General Studies</li>
+            <li>English</li>
+            <li>Science</li>
+            <li>Social Studies</li>
+            <li>Sanskrit</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="edu-card" data-aos="fade-up" data-aos-delay="300">
+      <img
+        src="images/VEMS.jpeg"
+        alt="Vivekananda English Medium School Logo"
+        class="college-logo"
+      />
+      <div class="content">
+        <a
+          href="https://vemsputtur.com/"
+          target="_blank"
+          class="edu-link"
+          >High School – Vivekananda English Medium School, Puttur</a
+        >
+        <div class="specialization">
+          <p class="font-semibold mt-2">Subjects:</p>
+          <ul class="list-disc list-inside text-cyan-200">
+            <li>Science</li>
+            <li>Mathematics</li>
+            <li>Kannada</li>
+            <li>Social Studies</li>
+            <li>English</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Balasubrahmanya. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
