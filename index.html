@@ -5,25 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Balasubrahmanya | Home</title>
 </head>
+<header class="bg-[#0f2027] shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo / Brand -->
+      <div class="text-[#00d4ff] font-extrabold text-xl tracking-wide">
+        <a href="index.html" class="hover:text-white transition-colors duration-300">Balasubrahmanya</a>
+      </div>
+
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-[#00d4ff] focus:outline-none" aria-label="Toggle menu">
+          <!-- Hamburger icon -->
+          <svg id="hamburger-icon" class="h-6 w-6 block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <!-- Close icon -->
+          <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links (Desktop) -->
+      <nav class="hidden md:flex space-x-8 text-[#00d4ff] font-semibold tracking-wide">
+        <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
+        <a href="education.html" class="hover:text-white transition-colors duration-300 font-bold underline">Education</a>
+        <a href="internships.html" class="hover:text-white transition-colors duration-300">Internships</a>
+        <a href="skills.html" class="hover:text-white transition-colors duration-300">Skills</a>
+        <a href="projects.html" class="hover:text-white transition-colors duration-300">Projects</a>
+        <a href="certifications.html" class="hover:text-white transition-colors duration-300">Certifications</a>
+        <a href="hackathons.html" class="hover:text-white transition-colors duration-300">Hackathons</a>
+        <a href="personal.html" class="hover:text-white transition-colors duration-300">Personal</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col mt-2 space-y-2 pb-4 text-[#00d4ff] font-semibold tracking-wide">
+      <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
+      <a href="education.html" class="hover:text-white transition-colors duration-300 font-bold underline">Education</a>
+      <a href="internships.html" class="hover:text-white transition-colors duration-300">Internships</a>
+      <a href="skills.html" class="hover:text-white transition-colors duration-300">Skills</a>
+      <a href="projects.html" class="hover:text-white transition-colors duration-300">Projects</a>
+      <a href="certifications.html" class="hover:text-white transition-colors duration-300">Certifications</a>
+      <a href="hackathons.html" class="hover:text-white transition-colors duration-300">Hackathons</a>
+      <a href="personal.html" class="hover:text-white transition-colors duration-300">Personal</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    hamburgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+</script>
+
 <body style="background:#0f2027; color:white; min-height:100vh; display:flex; flex-direction:column; justify-content:space-between; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; box-sizing:border-box;">
 
-  <!-- Navigation -->
-  <nav style="background:rgba(0,0,0,0.5); padding:12px 0; display:flex; justify-content:center; gap:16px; position:sticky; top:0; z-index:1000; flex-wrap:wrap;">
-    <a href="index.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Home</a>
-    <a href="education.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Education</a>
-    <a href="internships.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Internships</a>
-    <a href="projects.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Projects</a>
-    <a href="achievements.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Achievements</a>
-    <a href="gallery.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Gallery</a>
-    <a href="contact.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Contact</a>
-  </nav>
+
 
   <!-- Hero Section -->
-  <header class="hero" style="padding:40px 20px; max-width:900px; margin:40px auto 20px auto; display:flex; flex-wrap:wrap; flex-direction:column-reverse; justify-content:center; align-items:center; background:rgba(255 255 255 / 0.05); border-radius:12px; box-shadow:0 6px 30px rgba(0,0,0,0.6); text-align:center;">
-    <img src="images/DSC_0376.JPG" alt="Balasubrahmanya Profile" class="hero-photo" style="width:220px; height:220px; border-radius:12px; object-fit:cover; box-shadow:0 6px 20px rgba(0,0,0,0.5); margin:0 0 20px;" />
-    <div class="hero-text" style="color:#cde4ff;">
-      <h1 style="font-size:2.2rem; margin-bottom:12px; color:#00d4ff;">Hi, I'm Balasubrahmanya</h1>
-      <p style="font-size:1.1rem; line-height:1.5; margin-bottom:20px;">Aspiring Machine Learning Engineer with expertise in Artificial Intelligence, Web Development, AR, Machine Learning, and Agent-based Systems. Passionate about creating intelligent, scalable solutions.</p>
+  <header class="hero" style="padding:40px 20px; max-width:900px; margin:40px auto 20px auto; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; background:rgba(255 255 255 / 0.05); border-radius:12px; box-shadow:0 6px 30px rgba(0,0,0,0.6);">
+    <img src="images/DSC_0376.JPG" alt="Balasubrahmanya Profile" class="hero-photo" style="width:280px; height:280px; flex-shrink:0; border-radius:12px; object-fit:cover; box-shadow:0 6px 20px rgba(0,0,0,0.5); margin-right:30px;" />
+    <div class="hero-text" style="flex:1 1 280px; color:#cde4ff;">
+      <h1 style="font-size:2.5rem; margin-bottom:12px; color:#00d4ff;">Hi, I'm Balasubrahmanya</h1>
+      <p style="font-size:1.15rem; line-height:1.5; margin-bottom:20px;">Aspiring Machine Learning Engineer with expertise in Artificial Intelligence, Web Development, AR, Machine Learning, and Agent-based Systems. Passionate about creating intelligent, scalable solutions.</p>
     </div>
   </header>
 
@@ -37,7 +90,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section aria-label="Featured Projects" style="max-width:900px; margin:40px auto 60px auto; background:rgba(255 255 255 / 0.05); border-radius:12px; box-shadow:0 6px 30px rgba(0,0,0,0.6); padding:30px 20px; position:relative; color:#00d4ff;">
+  <section aria-label="Featured Projects" style="max-width:900px; margin:40px auto 60px auto; background:rgba(255 255 255 / 0.05); border-radius:12px; box-shadow:0 6px 30px rgba(0,0,0,0.6); padding:30px 20px; position:relative; color:#00d4ff; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
     <h2 style="color:#00d4ff; text-align:center; margin-bottom:30px; font-size:2rem;">Featured Projects</h2>
 
     <div style="display:flex; overflow:hidden; width:100%; max-width:860px; margin:0 auto; position:relative;" aria-live="polite" aria-atomic="true">
@@ -48,99 +101,99 @@
       <button id="nextBtn" aria-label="Next Project" style="position:absolute; top:50%; right:0; transform:translateY(-50%); background-color:rgba(0,212,255,0.2); border:none; color:#00d4ff; font-size:2rem; padding:5px 12px; cursor:pointer; border-radius:50%; transition:background-color 0.3s ease; user-select:none; z-index:10; opacity:1;">&#8594;</button>
     </div>
 
-    <script>
-      (function(){
-        const projects = [
-          { title: "SKILL-SYNC – Job Recommender", description: "NLP & ML-based system matching user skills with 1000+ job titles using cosine similarity." },
-          { title: "SamvaadX – Voice Interview Assistant", description: "GenAI voice assistant evaluating grammar, timing, and content relevance with 60% accuracy." },
-          { title: "Om.ai – Cultural Chatbot", description: "Chatbot answering queries from 5+ Indian traditional knowledge disciplines with 72% accuracy." },
-          { title: "Resume Evaluator Agent", description: "Langflow AI agent parsing resumes and job descriptions to improve job alignment by 40%." },
-          { title: "Rust Detection", description: "OpenCV-based rust detection system for industrial applications." }
-        ];
+   <script>
+  (function(){
+    const projects = [
+      { title: "SKILL-SYNC – Job Recommender", description: "NLP & ML-based system matching user skills with 1000+ job titles using cosine similarity." },
+      { title: "SamvaadX – Voice Interview Assistant", description: "GenAI voice assistant evaluating grammar, timing, and content relevance with 60% accuracy." },
+      { title: "Om.ai – Cultural Chatbot", description: "Chatbot answering queries from 5+ Indian traditional knowledge disciplines with 72% accuracy." },
+      { title: "Resume Evaluator Agent", description: "Langflow AI agent parsing resumes and job descriptions to improve job alignment by 40%." },
+      { title: "Rust Detection", description: "OpenCV-based rust detection system for industrial applications." }
+    ];
 
-        const carouselTrack = document.getElementById('carouselTrack');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
+    const carouselTrack = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-        const cardWidth = 260 + 20;
-        let visibleCards = window.innerWidth <= 700 ? 1 : 3;
-        let currentIndex = 0;
+    const cardWidth = 260 + 20; // card width + gap
+    let visibleCards = window.innerWidth <= 700 ? 1 : 3;
+    let currentIndex = 0;
 
-        function renderProjects() {
-          carouselTrack.innerHTML = '';
-          projects.forEach(proj => {
-            const card = document.createElement('div');
-            card.style.cssText = `
-              background: rgba(0, 212, 255, 0.1);
-              border: 1px solid #00d4ff;
-              border-radius: 12px;
-              min-width: 260px;
-              max-width: 260px;
-              padding: 20px;
-              color: #00d4ff;
-              box-shadow: 0 4px 15px rgba(0,212,255,0.3);
-              user-select: none;
-              flex-shrink: 0;
-            `;
-            card.innerHTML = `<h3 style="font-size: 1.2rem; margin-bottom: 12px; color: #00b1db;">${proj.title}</h3><p style="font-size:1rem; color:#c0e6ff; line-height:1.4;">${proj.description}</p>`;
-            carouselTrack.appendChild(card);
-          });
-          updateCarousel();
-        }
+    function renderProjects() {
+      carouselTrack.innerHTML = '';
+      projects.forEach(proj => {
+        const card = document.createElement('div');
+        card.style.cssText = `
+          background: rgba(0, 212, 255, 0.1);
+          border: 1px solid #00d4ff;
+          border-radius: 12px;
+          min-width: 260px;
+          max-width: 260px;
+          padding: 20px;
+          color: #00d4ff;
+          box-shadow: 0 4px 15px rgba(0,212,255,0.3);
+          user-select: none;
+          flex-shrink: 0;
+        `;
+        card.innerHTML = `<h3 style="font-size: 1.2rem; margin-bottom: 12px; color: #00b1db;">${proj.title}</h3><p style="font-size:1rem; color:#c0e6ff; line-height:1.4;">${proj.description}</p>`;
+        carouselTrack.appendChild(card);
+      });
+      updateCarousel();
+    }
 
-        function updateCarousel() {
-          const maxIndex = Math.max(0, projects.length - visibleCards);
-          if (currentIndex < 0) currentIndex = 0;
-          if (currentIndex > maxIndex) currentIndex = maxIndex;
+    function updateCarousel() {
+      const maxIndex = Math.max(0, projects.length - visibleCards);
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
 
-          prevBtn.disabled = currentIndex === 0;
-          nextBtn.disabled = currentIndex === maxIndex;
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === maxIndex;
 
-          prevBtn.style.opacity = prevBtn.disabled ? "0.3" : "1";
-          nextBtn.style.opacity = nextBtn.disabled ? "0.3" : "1";
+      prevBtn.style.opacity = prevBtn.disabled ? "0.3" : "1";
+      nextBtn.style.opacity = nextBtn.disabled ? "0.3" : "1";
 
-          carouselTrack.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
-        }
+      carouselTrack.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+    }
 
-        prevBtn.addEventListener('click', () => {
-          currentIndex--;
-          updateCarousel();
-          resetAutoSlide();
-        });
+    prevBtn.addEventListener('click', () => {
+      currentIndex--;
+      updateCarousel();
+      resetAutoSlide();
+    });
 
-        nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener('click', () => {
+      currentIndex++;
+      updateCarousel();
+      resetAutoSlide();
+    });
+
+    window.addEventListener('resize', () => {
+      visibleCards = window.innerWidth <= 700 ? 1 : 3;
+      updateCarousel();
+    });
+
+    let autoSlideInterval;
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        if (currentIndex < projects.length - visibleCards) {
           currentIndex++;
-          updateCarousel();
-          resetAutoSlide();
-        });
-
-        window.addEventListener('resize', () => {
-          visibleCards = window.innerWidth <= 700 ? 1 : 3;
-          updateCarousel();
-        });
-
-        let autoSlideInterval;
-        function startAutoSlide() {
-          autoSlideInterval = setInterval(() => {
-            if (currentIndex < projects.length - visibleCards) {
-              currentIndex++;
-            } else {
-              currentIndex = 0;
-            }
-            updateCarousel();
-          }, 3000);
+        } else {
+          currentIndex = 0;
         }
+        updateCarousel();
+      }, 3000); // 3 seconds gap
+    }
 
-        function resetAutoSlide() {
-          clearInterval(autoSlideInterval);
-          startAutoSlide();
-        }
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
 
-        renderProjects();
-        startAutoSlide();
+    renderProjects();
+    startAutoSlide();
 
-      })();
-    </script>
+  })();
+</script>
 
   </section>
 
