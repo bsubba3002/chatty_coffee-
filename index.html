@@ -2,112 +2,198 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Balasubrahmanya | Portfolio</title>
 
-  <!-- AOS Animation Library -->
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
     body {
       background: #0f2027;
       color: white;
+      line-height: 1.5;
+      scroll-behavior: smooth;
     }
-
     nav {
-      padding: 15px 30px;
-      display: flex;
-      justify-content: flex-end;
-      background-color: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.4);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      flex-wrap: wrap;
     }
-
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
+      margin: 10px 18px;
+      font-weight: 600;
       transition: color 0.3s ease;
+      font-size: 1rem;
+      white-space: nowrap;
     }
-
     nav a:hover {
       color: #00d4ff;
     }
 
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    section h2 {
+      color: #00d4ff;
+      margin-bottom: 18px;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    /* Hero Section Styles */
     header.hero {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: stretch;
-      padding: 60px 20px;
-      min-height: 100vh;
       gap: 30px;
+      min-height: 90vh;
+      margin: 40px auto 0 auto;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 60px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.5);
+      max-width: 900px;
     }
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
+    .hero .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
       padding: 30px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-      flex: 1;
-      min-width: 300px;
-      max-width: 550px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.35);
+      flex: 1 1 400px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-
-    .card h2 {
-      font-size: 1.8em;
-      margin-bottom: 15px;
-      color: #00d4ff;
-    }
-
-    .card p {
-      font-size: 1em;
-      line-height: 1.6;
       color: #d3e5ff;
     }
-
+    .hero .card h2 {
+      color: #00d4ff;
+      margin-bottom: 20px;
+    }
+    .hero .card p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
     .profile-img {
       width: 100%;
-      max-width: 250px;
+      max-width: 280px;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
       margin-top: 20px;
+      align-self: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     }
-
     .project-list {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
     }
-
     .project-list li {
-      padding: 8px 0;
-      color: #ffffff;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      font-size: 1rem;
     }
-
     .project-list li:last-child {
       border-bottom: none;
     }
 
-    @media screen and (max-width: 768px) {
+    /* Other Sections Content Styling */
+    .section-content p,
+    .section-content ul {
+      font-size: 1rem;
+      color: #c5d9ff;
+    }
+    .section-content ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .section-content ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact Form */
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      resize: vertical;
+      background-color: #152a3b;
+      color: white;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #a0b8d6;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #00d4ff;
+      background-color: #1f3a5a;
+    }
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00d4ff;
+      color: #0f2027;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #007bbf;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 700px) {
+      nav {
+        justify-content: center;
+      }
       header.hero {
         flex-direction: column;
+        min-height: auto;
+        padding: 40px 20px;
       }
-      .card {
+      .hero .card {
         max-width: 100%;
       }
     }
@@ -117,28 +203,25 @@
 
   <!-- Navigation -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="education.html">Education</a>
-    <a href="internships.html">Internships</a>
-    <a href="projects.html">Projects</a>
-    <a href="achievements.html">Achievements</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+    <a href="#hero">Home</a>
+    <a href="#education">Education</a>
+    <a href="#internships">Internships</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero">
-
-    <!-- Left: Professional Summary + Image -->
+  <header id="hero" class="hero" data-aos="fade-up">
     <div class="card" data-aos="fade-right">
       <h2>Professional Summary</h2>
       <p>
         Aspiring Machine Learning Engineer with a strong foundation in intelligent systems and data-driven technologies, currently pursuing a BE in Artificial Intelligence and Machine Learning. Proficient in Python, SQL, and core ML frameworks, with hands-on experience in data preprocessing, model development, and deployment. Skilled in supervised and unsupervised learning, deep learning, and NLP. A collaborative, adaptable team player with a passion for solving real-world problems through intelligent systems.
       </p>
-      <img src="images/profile.jpg" alt="Profile Photo" class="profile-img">
+      <img src="images/profile.jpg" alt="Profile Photo" class="profile-img" />
     </div>
 
-    <!-- Right: Featured Projects -->
     <div class="card" data-aos="fade-left" data-aos-delay="200">
       <h2>Featured Projects</h2>
       <ul class="project-list">
@@ -148,12 +231,99 @@
         <li>📝 Resume Evaluator Agent</li>
       </ul>
     </div>
-
   </header>
 
-  <!-- Init AOS -->
+  <!-- Education Section -->
+  <section id="education" data-aos="fade-up">
+    <h2>Education</h2>
+    <div class="section-content">
+      <p><strong>Bachelor of Engineering – Artificial Intelligence & Machine Learning</strong><br/>
+      Vivekananda College of Engineering & Technology, Puttur — Expected 2026</p>
+      
+      <p><strong>Pre-University Course – Science</strong><br/>
+      Sri Ram PU College, Kalladka — 2022</p>
+
+      <p><strong>SSLC (10th Standard)</strong><br/>
+      Sudana Residential School, Puttur — 2020</p>
+    </div>
+  </section>
+
+  <!-- Internships Section -->
+  <section id="internships" data-aos="fade-up">
+    <h2>Internships</h2>
+    <div class="section-content">
+      <p><strong>Project Management Intern</strong> — Blue Planet Info Solutions Pvt. Ltd (Dec 2024 – Mar 2025)</p>
+      <ul>
+        <li>Supported planning and tracking for AI development cycles, reducing planning delays by 10–15%.</li>
+        <li>Collaborated on organizing and updating documentation, improving access to project resources for 5+ team members.</li>
+      </ul>
+
+      <p><strong>Python Developer Intern</strong> — Native Soft Tech (Dec 2023 – Feb 2024)</p>
+      <ul>
+        <li>Created automation scripts to process and clean 100+ data records, improving task speed by 15–20%.</li>
+        <li>Assisted backend integration for handling real-time data inputs, enhancing internal data workflows.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="section-content">
+      <ul>
+        <li><strong>SKILL-SYNC – Skill-Based Job Title Recommendation:</strong> Developed an NLP & ML-powered job recommender analyzing user skills and mapping to 1,000+ job titles using cosine similarity. Achieved 87% match accuracy.</li>
+        <li><strong>SamvaadX – AI Interview Assistant:</strong> Built a GenAI voice interview system evaluating grammar, timing, and content relevance with 60% accuracy in feedback.</li>
+        <li><strong>Om.ai – Chatbot for Indian Knowledge Systems:</strong> Designed a chatbot answering queries across 5+ traditional disciplines, achieving 72% response relevance.</li>
+        <li><strong>Resume Evaluator Agent:</strong> Created a Langflow AI agent parsing resumes and comparing them with job descriptions, improving job alignment by 40% on average.</li>
+        <li>Other Projects: Rust Detection (OpenCV), Voice-to-Text Transcriber, Flutter Expense Tracker, Gemini Interview QA Agent, n8n Automation Bot, RasoiGenie AI Recipe Generator.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" data-aos="fade-up">
+    <h2>Achievements</h2>
+    <div class="section-content">
+      <ul>
+        <li>🏆 1st Place – Storytelling with AI, WE vs AI, 2024</li>
+        <li>🥈 2nd Place – VR Game & AR Book, IEEE-DSATM Innovation, 2024</li>
+        <li>Runner-Up – GenAI Resume Tool, Aetherion Hackathon, 2024</li>
+        <li>Finalist – AI Use Case Presentation, INDCON – Anna University, 2024</li>
+        <li>Finalist – VR Game Development, HAKOTSAVA, 2024</li>
+        <li>Finalist – Traditional Food Recommender, SRISHTI 2025</li>
+        <li>Finalist – Medical Device Prototype, IEEE R10 Hackathon, 2025</li>
+        <li>Participated in 10+ national hackathons including IEEE NITK, GirlGeekHack, TECHNOVATE, and others.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" data-aos="fade-up">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <!-- Replace src with your actual image filenames inside images/ folder -->
+      <img src="images/photo1.jpg" alt="Gallery Image 1" />
+      <img src="images/photo2.jpg" alt="Gallery Image 2" />
+      <img src="images/photo3.jpg" alt="Gallery Image 3" />
+      <img src="images/photo4.jpg" alt="Gallery Image 4" />
+      <img src="images/photo5.jpg" alt="Gallery Image 5" />
+      <img src="images/photo6.jpg" alt="Gallery Image 6" />
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form onsubmit="event.preventDefault(); alert('Message sent! Thank you.'); this.reset();">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
   <script>
-    AOS.init();
+    AOS.init({duration: 800, easing: 'ease-in-out'});
   </script>
 </body>
 </html>
