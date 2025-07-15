@@ -1,4 +1,54 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Balasubrahmanya | Home</title>
+</head>
+<body style="background:#0f2027; color:white; min-height:100vh; display:flex; flex-direction:column; justify-content:space-between; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; box-sizing:border-box;">
+
+  <!-- Navigation -->
+  <nav style="background:rgba(0,0,0,0.5); padding:12px 0; display:flex; justify-content:center; gap:16px; position:sticky; top:0; z-index:1000;">
+    <a href="index.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Home</a>
+    <a href="education.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Education</a>
+    <a href="internships.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Internships</a>
+    <a href="projects.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Projects</a>
+    <a href="achievements.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Achievements</a>
+    <a href="gallery.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Gallery</a>
+    <a href="contact.html" style="color:white; text-decoration:none; font-weight:600; padding:8px 14px; border-radius:6px; transition:background-color 0.3s ease;">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" style="padding:40px 20px; max-width:900px; margin:40px auto 20px auto; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; background:rgba(255 255 255 / 0.05); border-radius:12px; box-shadow:0 6px 30px rgba(0,0,0,0.6);">
+    <img src="images/DSC_0376.JPG" alt="Balasubrahmanya Profile" class="hero-photo" style="width:280px; height:280px; flex-shrink:0; border-radius:12px; object-fit:cover; box-shadow:0 6px 20px rgba(0,0,0,0.5); margin-right:30px;" />
+    <div class="hero-text" style="flex:1 1 280px; color:#cde4ff;">
+      <h1 style="font-size:2.5rem; margin-bottom:12px; color:#00d4ff;">Hi, I'm Balasubrahmanya</h1>
+      <p style="font-size:1.15rem; line-height:1.5; margin-bottom:20px;">Aspiring Machine Learning Engineer with expertise in Artificial Intelligence, Web Development, AR, Machine Learning, and Agent-based Systems. Passionate about creating intelligent, scalable solutions.</p>
+    </div>
+  </header>
+
+  <!-- Domains / Areas of Interest -->
+  <section class="domains" aria-label="Areas of Interest" style="max-width:900px; margin:30px auto; display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
+    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Augmented Reality (AR)</div>
+    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Web Development</div>
+    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Artificial Intelligence</div>
+    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Machine Learning</div>
+    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Agent-based Systems</div>
+  </section>
+
+  <!-- Projects Section -->
+  <section aria-label="Featured Projects" style="max-width:900px; margin:40px auto 60px auto; background:rgba(255 255 255 / 0.05); border-radius:12px; box-shadow:0 6px 30px rgba(0,0,0,0.6); padding:30px 20px; position:relative; color:#00d4ff; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <h2 style="color:#00d4ff; text-align:center; margin-bottom:30px; font-size:2rem;">Featured Projects</h2>
+
+    <div style="display:flex; overflow:hidden; width:100%; max-width:860px; margin:0 auto; position:relative;" aria-live="polite" aria-atomic="true">
+      <button id="prevBtn" aria-label="Previous Project" style="position:absolute; top:50%; left:0; transform:translateY(-50%); background-color:rgba(0,212,255,0.2); border:none; color:#00d4ff; font-size:2rem; padding:5px 12px; cursor:pointer; border-radius:50%; transition:background-color 0.3s ease; user-select:none; z-index:10; opacity:0.3;" disabled>&#8592;</button>
+
+      <div id="carouselTrack" style="display:flex; transition:transform 0.5s ease-in-out; will-change:transform; gap:20px; padding:0 40px; box-sizing:content-box; width:100%;"></div>
+
+      <button id="nextBtn" aria-label="Next Project" style="position:absolute; top:50%; right:0; transform:translateY(-50%); background-color:rgba(0,212,255,0.2); border:none; color:#00d4ff; font-size:2rem; padding:5px 12px; cursor:pointer; border-radius:50%; transition:background-color 0.3s ease; user-select:none; z-index:10; opacity:1;">&#8594;</button>
+    </div>
+
+   <script>
   (function(){
     const projects = [
       { title: "SKILL-SYNC – Job Recommender", description: "NLP & ML-based system matching user skills with 1000+ job titles using cosine similarity." },
@@ -91,3 +141,13 @@
 
   })();
 </script>
+
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:rgba(0,0,0,0.5); padding:20px; text-align:center; color:#00d4ff; font-size:0.9rem;">
+    &copy; 2025 Balasubrahmanya. All rights reserved.
+  </footer>
+
+</body>
+</html>
