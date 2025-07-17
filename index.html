@@ -1,206 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Balasubrahmanya | Home</title>
-</head>
-<header class="bg-[#0f2027] shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <!-- Logo / Brand -->
-      <div class="text-[#00d4ff] font-extrabold text-xl tracking-wide">
-        <a href="index.html" class="hover:text-white transition-colors duration-300">Balasubrahmanya</a>
-      </div>
-
-      <!-- Hamburger Menu (Mobile) -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-[#00d4ff] focus:outline-none" aria-label="Toggle menu">
-          <!-- Hamburger icon -->
-          <svg id="hamburger-icon" class="h-6 w-6 block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-          <!-- Close icon -->
-          <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Navigation Links (Desktop) -->
-      <nav class="hidden md:flex space-x-8 text-[#00d4ff] font-semibold tracking-wide">
-        <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
-        <a href="education.html" class="hover:text-white transition-colors duration-300 font-bold underline">Education</a>
-        <a href="internships.html" class="hover:text-white transition-colors duration-300">Internships</a>
-        <a href="skills.html" class="hover:text-white transition-colors duration-300">Skills</a>
-        <a href="projects.html" class="hover:text-white transition-colors duration-300">Projects</a>
-        <a href="certifications.html" class="hover:text-white transition-colors duration-300">Certifications</a>
-        <a href="hackathons.html" class="hover:text-white transition-colors duration-300">Hackathons</a>
-        <a href="personal.html" class="hover:text-white transition-colors duration-300">Personal</a>
-      </nav>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden flex flex-col mt-2 space-y-2 pb-4 text-[#00d4ff] font-semibold tracking-wide">
-      <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
-      <a href="education.html" class="hover:text-white transition-colors duration-300 font-bold underline">Education</a>
-      <a href="internships.html" class="hover:text-white transition-colors duration-300">Internships</a>
-      <a href="skills.html" class="hover:text-white transition-colors duration-300">Skills</a>
-      <a href="projects.html" class="hover:text-white transition-colors duration-300">Projects</a>
-      <a href="certifications.html" class="hover:text-white transition-colors duration-300">Certifications</a>
-      <a href="hackathons.html" class="hover:text-white transition-colors duration-300">Hackathons</a>
-      <a href="personal.html" class="hover:text-white transition-colors duration-300">Personal</a>
-    </div>
-  </div>
-</header>
-
-<script>
-  const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const hamburgerIcon = document.getElementById('hamburger-icon');
-  const closeIcon = document.getElementById('close-icon');
-
-  toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    hamburgerIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
-  });
-</script>
-
-<body style="background:#0f2027; color:white; min-height:100vh; display:flex; flex-direction:column; justify-content:space-between; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; box-sizing:border-box;">
-
-
-
-  <!-- Hero Section -->
-  <header class="hero" style="padding:40px 20px; max-width:900px; margin:40px auto 20px auto; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; background:rgba(255 255 255 / 0.05); border-radius:12px; box-shadow:0 6px 30px rgba(0,0,0,0.6);">
-    <img src="images/DSC_0376.JPG" alt="Balasubrahmanya Profile" class="hero-photo" style="width:280px; height:280px; flex-shrink:0; border-radius:12px; object-fit:cover; box-shadow:0 6px 20px rgba(0,0,0,0.5); margin-right:30px;" />
-    <div class="hero-text" style="flex:1 1 280px; color:#cde4ff;">
-      <h1 style="font-size:2.5rem; margin-bottom:12px; color:#00d4ff;">Hi, I'm Balasubrahmanya</h1>
-      <p style="font-size:1.15rem; line-height:1.5; margin-bottom:20px;">Aspiring Machine Learning Engineer with expertise in Artificial Intelligence, Web Development, AR, Machine Learning, and Agent-based Systems. Passionate about creating intelligent, scalable solutions.</p>
-    </div>
-  </header>
-
-  <!-- Domains / Areas of Interest -->
-  <section class="domains" aria-label="Areas of Interest" style="max-width:900px; margin:30px auto; display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
-    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Augmented Reality (AR)</div>
-    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Web Development</div>
-    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Artificial Intelligence</div>
-    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Machine Learning</div>
-    <div class="domain-card" style="background:rgba(0, 212, 255, 0.1); border:1px solid #00d4ff; border-radius:10px; padding:20px 30px; min-width:150px; max-width:180px; text-align:center; color:#00d4ff; font-weight:600; font-size:1.1rem; box-shadow:0 4px 15px rgba(0,212,255,0.3); user-select:none; cursor:default;">Agent-based Systems</div>
-  </section>
-
-  <!-- Projects Section -->
-  <section aria-label="Featured Projects" style="max-width:900px; margin:40px auto 60px auto; background:rgba(255 255 255 / 0.05); border-radius:12px; box-shadow:0 6px 30px rgba(0,0,0,0.6); padding:30px 20px; position:relative; color:#00d4ff; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <h2 style="color:#00d4ff; text-align:center; margin-bottom:30px; font-size:2rem;">Featured Projects</h2>
-
-    <div style="display:flex; overflow:hidden; width:100%; max-width:860px; margin:0 auto; position:relative;" aria-live="polite" aria-atomic="true">
-      <button id="prevBtn" aria-label="Previous Project" style="position:absolute; top:50%; left:0; transform:translateY(-50%); background-color:rgba(0,212,255,0.2); border:none; color:#00d4ff; font-size:2rem; padding:5px 12px; cursor:pointer; border-radius:50%; transition:background-color 0.3s ease; user-select:none; z-index:10; opacity:0.3;" disabled>&#8592;</button>
-
-      <div id="carouselTrack" style="display:flex; transition:transform 0.5s ease-in-out; will-change:transform; gap:20px; padding:0 40px; box-sizing:content-box; width:100%;"></div>
-
-      <button id="nextBtn" aria-label="Next Project" style="position:absolute; top:50%; right:0; transform:translateY(-50%); background-color:rgba(0,212,255,0.2); border:none; color:#00d4ff; font-size:2rem; padding:5px 12px; cursor:pointer; border-radius:50%; transition:background-color 0.3s ease; user-select:none; z-index:10; opacity:1;">&#8594;</button>
-    </div>
-
-   <script>
-  (function(){
-    const projects = [
-      { title: "SKILL-SYNC – Job Recommender", description: "NLP & ML-based system matching user skills with 1000+ job titles using cosine similarity." },
-      { title: "SamvaadX – Voice Interview Assistant", description: "GenAI voice assistant evaluating grammar, timing, and content relevance with 60% accuracy." },
-      { title: "Om.ai – Cultural Chatbot", description: "Chatbot answering queries from 5+ Indian traditional knowledge disciplines with 72% accuracy." },
-      { title: "Resume Evaluator Agent", description: "Langflow AI agent parsing resumes and job descriptions to improve job alignment by 40%." },
-      { title: "Rust Detection", description: "OpenCV-based rust detection system for industrial applications." }
-    ];
-
-    const carouselTrack = document.getElementById('carouselTrack');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-    const cardWidth = 260 + 20; // card width + gap
-    let visibleCards = window.innerWidth <= 700 ? 1 : 3;
-    let currentIndex = 0;
-
-    function renderProjects() {
-      carouselTrack.innerHTML = '';
-      projects.forEach(proj => {
-        const card = document.createElement('div');
-        card.style.cssText = `
-          background: rgba(0, 212, 255, 0.1);
-          border: 1px solid #00d4ff;
-          border-radius: 12px;
-          min-width: 260px;
-          max-width: 260px;
-          padding: 20px;
-          color: #00d4ff;
-          box-shadow: 0 4px 15px rgba(0,212,255,0.3);
-          user-select: none;
-          flex-shrink: 0;
-        `;
-        card.innerHTML = `<h3 style="font-size: 1.2rem; margin-bottom: 12px; color: #00b1db;">${proj.title}</h3><p style="font-size:1rem; color:#c0e6ff; line-height:1.4;">${proj.description}</p>`;
-        carouselTrack.appendChild(card);
-      });
-      updateCarousel();
-    }
-
-    function updateCarousel() {
-      const maxIndex = Math.max(0, projects.length - visibleCards);
-      if (currentIndex < 0) currentIndex = 0;
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
-
-      prevBtn.disabled = currentIndex === 0;
-      nextBtn.disabled = currentIndex === maxIndex;
-
-      prevBtn.style.opacity = prevBtn.disabled ? "0.3" : "1";
-      nextBtn.style.opacity = nextBtn.disabled ? "0.3" : "1";
-
-      carouselTrack.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
-    }
-
-    prevBtn.addEventListener('click', () => {
-      currentIndex--;
-      updateCarousel();
-      resetAutoSlide();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex++;
-      updateCarousel();
-      resetAutoSlide();
-    });
-
-    window.addEventListener('resize', () => {
-      visibleCards = window.innerWidth <= 700 ? 1 : 3;
-      updateCarousel();
-    });
-
-    let autoSlideInterval;
-    function startAutoSlide() {
-      autoSlideInterval = setInterval(() => {
-        if (currentIndex < projects.length - visibleCards) {
-          currentIndex++;
-        } else {
-          currentIndex = 0;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Balasubrahmanya | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles that complement Tailwind and handle specifics not easily done inline */
+        body {
+            background: #0f2027;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        updateCarousel();
-      }, 3000); // 3 seconds gap
-    }
 
-    function resetAutoSlide() {
-      clearInterval(autoSlideInterval);
-      startAutoSlide();
-    }
+        .hero {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 40px auto 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+        }
 
-    renderProjects();
-    startAutoSlide();
+        .hero-photo {
+            width: 280px;
+            height: 280px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            margin-right: 30px;
+        }
 
-  })();
-</script>
+        /* Adjust hero photo margin for smaller screens */
+        @media (max-width: 768px) {
+            .hero-photo {
+                margin-right: 0; /* Remove margin on mobile */
+                margin-bottom: 20px; /* Add bottom margin instead */
+                width: 200px; /* Make photo slightly smaller on mobile */
+                height: 200px;
+            }
+            .hero-text {
+                text-align: center; /* Center text on mobile */
+            }
+        }
 
-  </section>
+        .hero-text {
+            flex: 1 1 280px;
+            color: #cde4ff;
+        }
 
-  <!-- Footer -->
-  <footer style="background:rgba(0,0,0,0.5); padding:20px; text-align:center; color:#00d4ff; font-size:0.9rem;">
-    &copy; 2025 Balasubrahmanya. All rights reserved.
-  </footer>
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            color: #00d4ff;
+        }
 
+        .hero-text p {
+            font-size: 1.15rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .domains {
+            max-width: 900px;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .domain-card {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid #00d4ff;
+            border-radius: 10px;
+            padding: 20px 30px;
+            min-width: 150px;
+            max-width: 180px;
+            text-align: center;
+            color: #00d4ff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+            user-select: none;
+            cursor: default;
+        }
+        
+        /* Adjust domain cards for smaller screens */
+        @media (max-width: 480px) {
+            .domain-card {
+                padding: 15px 20px;
+                font-size: 1rem;
+                min-width: unset; /* Allow cards to shrink more */
+                flex-basis: 45%; /* Arrange 2 cards per row on very small screens */
+                max-width: 45%;
+            }
+        }
+
+        .projects-section {
+            max-width: 900px;
+            margin: 40px auto 60px auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+            padding: 30px 20px;
+            position: relative;
+            color: #00d4ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .projects-section h2 {
+            color: #00d4ff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 860px; /* Adjust based on max card width * number of visible cards + gaps */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+            gap: 20px;
+            padding: 0 40px; /* Space for buttons */
+            box-sizing: content-box;
+            width: 100%;
+        }
+
+        .project-card {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid #00d4ff;
+            border-radius: 12px;
+            min-width: 260px;
+            max-width: 260px;
+            padding: 20px;
+            color: #00d4ff;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+            user-select: none;
+            flex-shrink: 0;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #00b1db;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #c0e6ff;
+            line-height: 1.4;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 212, 255, 0.2);
+            border: none;
+            color: #00d4ff;
+            font-size: 2rem;
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+            user-select: none;
+            z-index: 10;
+        }
+
+        .carousel-button:hover:not(:disabled) {
+            background-color: rgba(0, 212, 255, 0.4);
+        }
+
+        .carousel-button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        #prevBtn {
+            left: 0;
+        }
+
+        #nextBtn {
+            right: 0;
+        }
+
+        /* Adjust carousel container for very small screens to ensure buttons are always visible */
+        @media (max-width: 600px) {
+            .carousel-container {
+                max-width: calc(100% - 80px); /* Account for button width + padding */
+            }
+            .carousel-track {
+                padding: 0; /* Remove inner padding when buttons are close */
+            }
+            .carousel-button {
+                padding: 3px 8px; /* Smaller buttons on mobile */
+                font-size: 1.5rem;
+            }
+            #prevBtn {
+                left: -10px; /* Move buttons slightly outside for better visibility */
+            }
+            #nextBtn {
+                right: -10px; /* Move buttons slightly outside for better visibility */
+            }
+        }
+
+
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+            color: #00d4ff;
+            font-size: 0.9rem;
+            margin-top: auto; /* Pushes footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-[#0f2027] shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 text-[#00d4ff] font-extrabold text-xl tracking-wide">
+                    <a href="index.html" class="hover:text-white transition-colors duration-300">Balasubrahmanya</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-[#00d4ff] focus:outline-none p-2 rounded-md" aria-label="Toggle menu">
+                        <svg id="hamburger-icon" class="h-6 w-6 block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav class="hidden md:flex space-x-8 text-[#00d4ff] font-semibold tracking-wide">
+                    <a href="index.html" class="hover:text-white transition-colors duration-300">Home</a>
+                    <a href="education.html" class="hover:text-white transition-colors duration-300 font-bold underline">Education</a>
+                    <a href="internships.html" class="hover:text-white transition-colors duration-300">Internships</a>
+                    <a href="skills.html" class="hover:text-white transition-colors duration-300">Skills</a>
+                    <a href="projects.html" class="hover:text-white transition-colors duration-300">Projects</a>
+                    <a href="certifications.html" class="hover:text-white transition-colors duration-300">Certifications</a>
+                    <a href="hackathons.html" class="hover:text-white transition-colors duration-300">Hackathons</a>
+                    <a href="personal.html" class="hover:text-white transition-colors duration-300">Personal</a>
+                </nav>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center mt-2 space-y-2 pb-4 text-[#00d4ff] font-semibold tracking-wide">
+                <a href="index.html" class="block w-full text-center py-2 hover:text-white transition-colors duration-300">Home</a>
+                <a href="education.html" class="block w-full text-center py-2 hover:text-white transition-colors duration-300 font-bold underline">Education</a>
+                <a href="internships.html" class="block w-full text-center py-2 hover:text-white transition-colors duration-300">Internships</a>
+                <a href="skills.html" class="block w-full text-center py-2 hover:text-white transition-colors duration-300">Skills</a>
+                <a href="projects.html" class="block w-full text-center py-2 hover:text-white transition-colors duration-300">Projects</a>
+                <a href="certifications.html" class="block w-full text-center py-2 hover:text-white transition-colors duration-300">Certifications</a>
+                <a href="hackathons.html" class="block w-full text-center py-2 hover:text-white transition-colors duration-300">Hackathons</a>
+                <a href="personal.html" class="block w-full text-center py-2 hover:text-white transition-colors duration-300">Personal</a>
+            </div>
+        </div>
+    </header>
+
+    <header class="hero">
+        <img src="images/DSC_0376.JPG" alt="Balasubrahmanya Profile" class="hero-photo" />
+        <div class="hero-text">
+            <h1>Hi, I'm Balasubrahmanya</h1>
+            <p>Aspiring Machine Learning Engineer with expertise in Artificial Intelligence, Web Development, AR, Machine Learning, and Agent-based Systems. Passionate about creating intelligent, scalable solutions.</p>
+        </div>
+    </header>
+
+    <section class="domains" aria-label="Areas of Interest">
+        <div class="domain-card">Augmented Reality (AR)</div>
+        <div class="domain-card">Web Development</div>
+        <div class="domain-card">Artificial Intelligence</div>
+        <div class="domain-card">Machine Learning</div>
+        <div class="domain-card">Agent-based Systems</div>
+    </section>
+
+    <section class="projects-section" aria-label="Featured Projects">
+        <h2>Featured Projects</h2>
+
+        <div class="carousel-container" aria-live="polite" aria-atomic="true">
+            <button id="prevBtn" class="carousel-button" aria-label="Previous Project">&#8592;</button>
+
+            <div id="carouselTrack" class="carousel-track"></div>
+
+            <button id="nextBtn" class="carousel-button" aria-label="Next Project">&#8594;</button>
+        </div>
+
+        <script>
+            (function(){
+                const projects = [
+                    { title: "SKILL-SYNC – Job Recommender", description: "NLP & ML-based system matching user skills with 1000+ job titles using cosine similarity." },
+                    { title: "SamvaadX – Voice Interview Assistant", description: "GenAI voice assistant evaluating grammar, timing, and content relevance with 60% accuracy." },
+                    { title: "Om.ai – Cultural Chatbot", description: "Chatbot answering queries from 5+ Indian traditional knowledge disciplines with 72% accuracy." },
+                    { title: "Resume Evaluator Agent", description: "Langflow AI agent parsing resumes and job descriptions to improve job alignment by 40%." },
+                    { title: "Rust Detection", description: "OpenCV-based rust detection system for industrial applications." }
+                ];
+
+                const carouselTrack = document.getElementById('carouselTrack');
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+
+                // cardWidth includes the gap between cards
+                const cardBaseWidth = 260; // Base width of a project card
+                const cardGap = 20; // Gap between cards
+
+                let visibleCards = 1; // Default for small screens
+                let currentIndex = 0;
+                let autoSlideInterval;
+
+                // Function to update visibleCards based on screen width
+                function updateVisibleCards() {
+                    if (window.innerWidth >= 768) { // Desktop breakpoint
+                        visibleCards = 3;
+                    } else if (window.innerWidth >= 480) { // Tablet breakpoint, show 2 cards
+                        visibleCards = 2;
+                    } else { // Mobile breakpoint, show 1 card
+                        visibleCards = 1;
+                    }
+                }
+
+                function renderProjects() {
+                    carouselTrack.innerHTML = '';
+                    projects.forEach(proj => {
+                        const card = document.createElement('div');
+                        card.className = 'project-card'; // Use the class for styling
+                        card.innerHTML = `<h3>${proj.title}</h3><p>${proj.description}</p>`;
+                        carouselTrack.appendChild(card);
+                    });
+                    updateCarousel();
+                }
+
+                function updateCarousel() {
+                    // Calculate dynamic card width including gap for translation
+                    // This ensures smooth transitions even if actual card width varies slightly due to screen size
+                    const totalCardWidth = cardBaseWidth + cardGap;
+
+                    const maxIndex = Math.max(0, projects.length - visibleCards);
+                    if (currentIndex < 0) currentIndex = 0;
+                    if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+                    prevBtn.disabled = currentIndex === 0;
+                    nextBtn.disabled = currentIndex === maxIndex;
+
+                    // Calculate translation based on how many cards need to be shifted
+                    carouselTrack.style.transform = `translateX(${-currentIndex * totalCardWidth}px)`;
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    currentIndex--;
+                    updateCarousel();
+                    resetAutoSlide();
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    currentIndex++;
+                    updateCarousel();
+                    resetAutoSlide();
+                });
+
+                window.addEventListener('resize', () => {
+                    updateVisibleCards(); // Re-evaluate visible cards on resize
+                    updateCarousel(); // Update carousel position
+                });
+
+                function startAutoSlide() {
+                    autoSlideInterval = setInterval(() => {
+                        if (currentIndex < projects.length - visibleCards) {
+                            currentIndex++;
+                        } else {
+                            currentIndex = 0;
+                        }
+                        updateCarousel();
+                    }, 3000); // 3 seconds gap
+                }
+
+                function resetAutoSlide() {
+                    clearInterval(autoSlideInterval);
+                    startAutoSlide();
+                }
+
+                // Initial setup
+                updateVisibleCards(); // Set initial visible cards
+                renderProjects();
+                startAutoSlide();
+
+            })();
+        </script>
+    </section>
+
+    <footer>
+        &copy; 2025 Balasubrahmanya. All rights reserved.
+    </footer>
+
+    <script>
+        // Header mobile menu toggle script
+        const toggleBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
