@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balasubrahmanya | Personal</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        /* Custom styles to enforce the DARK, NEON THEME */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f2027; /* Dark background */
+            color: white; /* White text for contrast */
+            min-height: 100vh; /* Ensures body takes full viewport height */
+            display: flex; /* Enables flexbox layout for direct children */
+            flex-direction: column; /* Stacks children vertically */
+        }
+
+        /* Essential for content to fill available space between header and footer */
+        main {
+            flex-grow: 1; /* Allows main content to expand and push footer down */
+        }
+
+        /* Neon cyan color - primary accent */
+        .neon-cyan {
+            color: #00d4ff;
+        }
+
+        /* Semi-transparent dark card background with glow */
+        .card-dark-bg {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 1.5rem; /* rounded-3xl */
+            box-shadow: 0 0 8px rgba(0, 212, 255, 0.3); /* Initial subtle glow */
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            padding: 1.5rem; /* p-6 */
+        }
+
+        /* Card hover effect: stronger glow + slight lift */
+        .card-dark-bg:hover {
+            box-shadow: 0 0 12px 4px #00d4ff;
+            transform: translateY(-6px);
+        }
+
+        /* Neon button style (if used) */
+        .btn-neon {
+            background-color: #00d4ff;
+            color: #0f2027; /* Dark text on neon button */
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 600;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            user-select: none;
+            text-decoration: none;
+            box-shadow: 0 0 8px #00d4ff;
+        }
+
+        /* Neon button hover */
+        .btn-neon:hover {
+            background-color: #00b0ff; /* Slightly darker cyan */
+            box-shadow: 0 0 12px 4px #00b0ff; /* Stronger glow */
+        }
+
+        /* Neon link style for contact/social media */
+        a.neon-link {
+            color: #00d4ff;
+            font-weight: 600;
+            text-decoration: none;
+            transition: text-shadow 0.3s ease, color 0.3s ease;
+        }
+        a.neon-link:hover {
+            text-shadow: 0 0 8px #00d4ff;
+            text-decoration: underline;
+            color: #00b0ff; /* Slightly darker neon on hover for links */
+        }
+
+        /* Text colors for labels and regular text within dark cards */
+        .card-label {
+            color: #c0e6ff; /* Lighter white/blue for labels */
+            font-weight: 700;
+        }
+        .card-text {
+            color: #e0f8ff; /* Very light cyan for details */
+        }
+
+        /* Styling for list items with Feather icons */
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            color: #e0f8ff; /* Match regular card text */
+        }
+
+        .contact-info li svg {
+            flex-shrink: 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #00d4ff; /* Neon cyan icons */
+            margin-right: 0.5rem; /* Spacing between icon and text */
+        }
+
+        /* Navigation active link style for the dark theme */
+        .current-page-link {
+            font-weight: 700;
+            text-decoration: underline;
+            color: white !important; /* White for active link on dark background */
+        }
+        .md .current-page-link {
+            color: white !important; /* Ensure white for desktop */
+            text-shadow: 0 0 5px rgba(0, 212, 255, 0.7); /* Subtle glow for active desktop link */
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-blue-600 font-extrabold text-xl">
+                    <a href="index.html" class="hover:text-blue-800 transition-colors duration-200">Balasubrahmanya</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-blue-600 focus:outline-none p-2 rounded-md">
+                        <svg id="hamburger-icon" class="h-6 w-6 block" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+
+                        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hidden md:flex space-x-6 text-blue-600 font-semibold">
+                    <a href="index.html" class="nav-link-hover transition-colors duration-200">Home</a>
+                    <a href="education.html" class="nav-link-hover transition-colors duration-200">Education</a>
+                    <a href="internships.html" class="nav-link-hover transition-colors duration-200">Internships</a>
+                    <a href="skills.html" class="nav-link-hover transition-colors duration-200">Skills</a>
+                    <a href="projects.html" class="nav-link-hover transition-colors duration-200">Projects</a>
+                    <a href="certifications.html" class="nav-link-hover transition-colors duration-200">Certifications</a>
+                    <a href="hackathons.html" class="nav-link-hover transition-colors duration-200">Hackathons</a>
+                    <a href="personal.html" class="nav-link-hover transition-colors duration-200">Personal</a>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden flex-col space-y-2 mt-2 pb-4 text-blue-600 font-semibold bg-white rounded-b-md shadow-lg">
+                <a href="index.html">Home</a>
+                <a href="education.html">Education</a>
+                <a href="internships.html">Internships</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="certifications.html">Certifications</a>
+                <a href="hackathons.html">Hackathons</a>
+                <a href="personal.html">Personal</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <header class="text-center mb-10" data-aos="fade-down">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-700">Personal Details</h1>
+            <p class="text-gray-600 mt-2 text-lg sm:text-xl">Basic information and background</p>
+        </header>
+
+<section 
+    style="
+        background: rgba(0, 0, 0, 0.6); 
+        border-radius: 1.5rem; 
+        box-shadow: 0 0 8px rgba(0, 212, 255, 0.3); /* Initial glow */
+        transition: box-shadow 0.3s ease, transform 0.3s ease; /* For hover effects defined in CSS */
+        padding: 1.5rem; /* p-6 */
+        margin-bottom: 2rem; /* mb-8 */
+        /* Note: sm:p-8 is a media query and cannot be applied inline */
+    " 
+    data-aos="fade-up"
+>
+    <h2 
+        style="
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #00d4ff; /* neon-cyan */
+            margin-bottom: 1rem; /* mb-4 */
+            display: flex; /* flex */
+            align-items: center; /* items-center */
+            /* Note: sm:text-3xl is a media query and cannot be applied inline */
+        "
+    >
+        <span 
+            style="
+                margin-right: 0.75rem; /* mr-3 */
+                color: #00d4ff; /* text-[#00d4ff] */
+            "
+        >👤</span> Personal Information
+    </h2>
+    <ul 
+        style="
+            font-size: 1.125rem; /* text-lg */
+            color: white; /* Base text color for ul, li children will override */
+            /* Note: space-y-2 (vertical spacing between list items) is hard to apply inline directly on UL.
+               It typically requires margin-top on list items or flex column on UL. */
+        "
+    >
+        <li style="margin-bottom: 0.5rem;">
+            <strong style="color: #c0e6ff; font-weight: 700;">DOB:</strong> 
+            <span style="color: #e0f8ff;">23 December 2003</span>
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong style="color: #c0e6ff; font-weight: 700;">Gender:</strong> 
+            <span style="color: #e0f8ff;">Male</span>
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong style="color: #c0e6ff; font-weight: 700;">Nationality:</strong> 
+            <span style="color: #e0f8ff;">Indian</span>
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong style="color: #c0e6ff; font-weight: 700;">Languages:</strong> 
+            <span style="color: #e0f8ff;">English, Kannada, Hindi, Konkani</span>
+        </li>
+        <li>
+            <strong style="color: #c0e6ff; font-weight: 700;">Location:</strong> 
+            <span style="color: #e0f8ff;">Nehru Nagar, Puttur, Karnataka</span>
+        </li>
+    </ul>
+</section>
+
+       <section 
+            style="
+                background: rgba(0, 0, 0, 0.6); 
+                border-radius: 1.5rem; 
+                box-shadow: 0 0 8px rgba(0, 212, 255, 0.3); /* Initial glow */
+                transition: box-shadow 0.3s ease, transform 0.3s ease; /* For hover effects defined in CSS */
+                padding: 1.5rem; /* p-6 */
+                margin-bottom: 2rem; /* mb-8 */
+            " 
+            data-aos="fade-up" data-aos-delay="100"
+        >
+            <h2 
+                style="
+                    font-size: 1.5rem; /* text-2xl */
+                    font-weight: 700; /* font-bold */
+                    color: #00d4ff; /* neon-cyan */
+                    margin-bottom: 1rem; /* mb-4 */
+                    display: flex; /* flex */
+                    align-items: center; /* items-center */
+                "
+            >
+                <span 
+                    style="
+                        margin-right: 0.75rem; /* mr-3 */
+                        color: #00d4ff; /* text-[#00d4ff] */
+                    "
+                >📞</span> Contact Information
+            </h2>
+            <ul 
+                style="
+                    font-size: 1.125rem; /* text-lg */
+                    color: #e0f8ff; /* card-text color */
+                    /* Note: space-y-2 (vertical spacing between list items) is hard to apply inline directly on UL.
+                       It typically requires margin-top on list items or flex column on UL. */
+                " 
+                class="contact-info"
+            >
+                <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                    <i data-feather="mail" style="color: #00d4ff; margin-right: 0.5rem; flex-shrink: 0; width: 1.25rem; height: 1.25rem;"></i>
+                    <strong style="color: #c0e6ff; font-weight: 700;">Email:</strong>
+                    <a href="mailto:balasubrahmanya3002@gmail.com" 
+                        style="
+                            color: #00d4ff; 
+                            font-weight: 600; 
+                            text-decoration: none; 
+                            transition: text-shadow 0.3s ease, color 0.3s ease; /* transition for hover */
+                            margin-left: 0.5rem;
+                        " 
+                        class="neon-link"
+                    >balasubrahmanya3002@gmail.com</a>
+                </li>
+                <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                    <i data-feather="phone" style="color: #00d4ff; margin-right: 0.5rem; flex-shrink: 0; width: 1.25rem; height: 1.25rem;"></i>
+                    <strong style="color: #c0e6ff; font-weight: 700;">Phone:</strong>
+                    <a href="tel:+917019079848" 
+                        style="
+                            color: #00d4ff; 
+                            font-weight: 600; 
+                            text-decoration: none; 
+                            transition: text-shadow 0.3s ease, color 0.3s ease; /* transition for hover */
+                            margin-left: 0.5rem;
+                        " 
+                        class="neon-link"
+                    >+91-7019079848</a>
+                </li>
+                <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                    <i data-feather="linkedin" style="color: #00d4ff; margin-right: 0.5rem; flex-shrink: 0; width: 1.25rem; height: 1.25rem;"></i>
+                    <strong style="color: #c0e6ff; font-weight: 700;">LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/bala-subrahmanya-413221257" 
+                        style="
+                            color: #00d4ff; 
+                            font-weight: 600; 
+                            text-decoration: none; 
+                            transition: text-shadow 0.3s ease, color 0.3s ease; /* transition for hover */
+                            margin-left: 0.5rem;
+                        " 
+                        class="neon-link"
+                    >linkedin.com/in/balasubrahmanya</a>
+                </li>
+                <li style="display: flex; align-items: center;">
+                    <i data-feather="github" style="color: #00d4ff; margin-right: 0.5rem; flex-shrink: 0; width: 1.25rem; height: 1.25rem;"></i>
+                    <strong style="color: #c0e6ff; font-weight: 700;">GitHub:</strong>
+                    <a href="https://github.com/bsubba3002" 
+                        style="
+                            color: #00d4ff; 
+                            font-weight: 600; 
+                            text-decoration: none; 
+                            transition: text-shadow 0.3s ease, color 0.3s ease; /* transition for hover */
+                            margin-left: 0.5rem;
+                        " 
+                        class="neon-link"
+                    >github.com/bsubba3002</a>
+                </li>
+            </ul>
+        </section>
+
+        <section 
+            style="
+                background: rgba(0, 0, 0, 0.6); 
+                border-radius: 1.5rem; 
+                box-shadow: 0 0 8px rgba(0, 212, 255, 0.3); /* Initial glow */
+                transition: box-shadow 0.3s ease, transform 0.3s ease; /* For hover effects defined in CSS */
+                padding: 1.5rem; /* p-6 */
+                margin-bottom: 2rem; /* mb-8 */
+            " 
+            data-aos="fade-up" data-aos-delay="200"
+        >
+            <h2 
+                style="
+                    font-size: 1.5rem; /* text-2xl */
+                    font-weight: 700; /* font-bold */
+                    color: #00d4ff; /* neon-cyan */
+                    margin-bottom: 1rem; /* mb-4 */
+                    display: flex; /* flex */
+                    align-items: center; /* items-center */
+                "
+            >
+                <span 
+                    style="
+                        margin-right: 0.75rem; /* mr-3 */
+                        color: #00d4ff; /* text-[#00d4ff] */
+                    "
+                >🎯</span> Hobbies & Interests
+            </h2>
+            <ul 
+                style="
+                    font-size: 1.125rem; /* text-lg */
+                    color: #e0f8ff; /* card-text color */
+                    /* Note: space-y-2 (vertical spacing between list items) is hard to apply inline directly on UL. */
+                "
+            >
+                <li style="margin-bottom: 0.5rem;"><span style="color: #e0f8ff;">Travelling and exploring new places</span></li>
+                <li style="margin-bottom: 0.5rem;"><span style="color: #e0f8ff;">Photography and video editing</span></li>
+                <li style="margin-bottom: 0.5rem;"><span style="color: #e0f8ff;">Reading books on technology and personal development</span></li>
+                <li style="margin-bottom: 0.5rem;"><span style="color: #e0f8ff;">Gaming and Virtual Reality</span></li>
+                <li><span style="color: #e0f8ff;">Volunteer work and community service</span></li>
+            </ul>
+        </section>
+
+        <section 
+            style="
+                background: rgba(0, 0, 0, 0.6); 
+                border-radius: 1.5rem; 
+                box-shadow: 0 0 8px rgba(0, 212, 255, 0.3); /* Initial glow */
+                transition: box-shadow 0.3s ease, transform 0.3s ease; /* For hover effects defined in CSS */
+                padding: 1.5rem; /* p-6 */
+                margin-bottom: 2rem; /* mb-8 */
+            " 
+            data-aos="fade-up" data-aos-delay="300"
+        >
+            <h2 
+                style="
+                    font-size: 1.5rem; /* text-2xl */
+                    font-weight: 700; /* font-bold */
+                    color: #00d4ff; /* neon-cyan */
+                    margin-bottom: 1rem; /* mb-4 */
+                    display: flex; /* flex */
+                    align-items: center; /* items-center */
+                "
+            >
+                <span 
+                    style="
+                        margin-right: 0.75rem; /* mr-3 */
+                        color: #00d4ff; /* text-[#00d4ff] */
+                    "
+                >🌐</span> Social Media
+            </h2>
+            <ul 
+                style="
+                    font-size: 1.125rem; /* text-lg */
+                    color: #e0f8ff; /* card-text color */
+                    /* Note: space-y-2 (vertical spacing between list items) is hard to apply inline directly on UL. */
+                " 
+                class="contact-info"
+            >
+                <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                    <i data-feather="twitter" style="color: #00d4ff; margin-right: 0.5rem; flex-shrink: 0; width: 1.25rem; height: 1.25rem;"></i>
+                    <strong style="color: #c0e6ff; font-weight: 700;">Twitter:</strong>
+                    <a href="https://twitter.com/yourusername" 
+                        style="
+                            color: #00d4ff; 
+                            font-weight: 600; 
+                            text-decoration: none; 
+                            transition: text-shadow 0.3s ease, color 0.3s ease; /* transition for hover */
+                            margin-left: 0.5rem;
+                        " 
+                        class="neon-link"
+                    >twitter.com/yourusername</a>
+                </li>
+                <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                    <i data-feather="facebook" style="color: #00d4ff; margin-right: 0.5rem; flex-shrink: 0; width: 1.25rem; height: 1.25rem;"></i>
+                    <strong style="color: #c0e6ff; font-weight: 700;">Facebook:</strong>
+                    <a href="https://facebook.com/yourusername" 
+                        style="
+                            color: #00d4ff; 
+                            font-weight: 600; 
+                            text-decoration: none; 
+                            transition: text-shadow 0.3s ease, color 0.3s ease; /* transition for hover */
+                            margin-left: 0.5rem;
+                        " 
+                        class="neon-link"
+                    >facebook.com/yourusername</a>
+                </li>
+                <li style="display: flex; align-items: center;">
+                    <i data-feather="instagram" style="color: #00d4ff; margin-right: 0.5rem; flex-shrink: 0; width: 1.25rem; height: 1.25rem;"></i>
+                    <strong style="color: #c0e6ff; font-weight: 700;">Instagram:</strong>
+                    <a href="https://instagram.com/yourusername" 
+                        style="
+                            color: #00d4ff; 
+                            font-weight: 600; 
+                            text-decoration: none; 
+                            transition: text-shadow 0.3s ease, color 0.3s ease; /* transition for hover */
+                            margin-left: 0.5rem;
+                        " 
+                        class="neon-link"
+                    >instagram.com/yourusername</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="mt-16 py-8 text-center text-gray-600 text-sm flex-shrink-0">
+        <div class="w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-4 rounded-full animate-pulse"></div>
+
+        <p class="mb-2">
+            Designed with <span class="inline-block animate-bounce text-red-500 mx-1">❤️</span>
+            by <span class="font-semibold text-blue-600 hover:underline hover:text-blue-800 transition">Balasubrahmanya</span>
+        </p>
+
+        <p class="text-xs text-gray-400">
+            © <span id="year"></span> All rights reserved.
+        </p>
+
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>feather.replace();</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+
+</body>
+</html>
